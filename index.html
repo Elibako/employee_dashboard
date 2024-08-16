@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+  
+</head>
+<body>
+
+    <div class="container">
+        <div class="containerA">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="">
+                </div>
+                <nav class="menu">
+                    <a href="#">
+                        <img src="./img/dashboardicon.svg" alt="Dashboard Icon">
+                        Dashboard 
+                    </a>
+                    <a href="#">
+                        <img src="./img/roles-icon.svg" alt="Analytics Icon">
+                        Roles
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <img src="./img/employee-icon.svg" alt="Employees Icon">
+                            Employees
+                            <span>&#9662;</span> <!-- Down arrow indicator -->
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">All Employees </a></li>
+                            <li><a href="#">Recent Hires</a></li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#">
+                        <img src="./img/payroll-icon.svg" alt="Projects Icon">
+                        Payroll
+                    </a>
+                    <a href="#">
+                        <img src="./img/report-icon.svg" alt="Calendar Icon">
+                        Report
+                    </a>
+                    <!-- <a href="#">
+                        <img src="./img/messages-icon.svg" alt="Messages Icon">
+                        Messages
+                    </a> -->
+                    <a href="#">
+                        <img src="./img/setting-icon.svg" alt="Settings Icon">
+                        Settings
+                    </a>
+                </nav>
+            </div>
+        
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <!-- Top Navigation Bar -->
+                <div class="topbar">
+                    <form class="search-bar">
+                        <input type="text" placeholder="Search anything here...">
+                    </form>
+                    <div class="user-actions">
+                        <a href="#" class="settings"><img src="./img/settings.svg" alt=""></a>
+                      
+                    </div>
+                    <div class="notification-bell">
+                        <a href="#" class="notification-bell"><img src="./img/notification.svg" alt=""></a>
+                    </div>
+                    <a href="#" class="profile">
+                        <img src="./img/profilePic.svg" alt="Profile Picture">
+                    </a>
+                </div>
+                <div class="content">
+                    <div class="employee-header">
+                        <h2>Employees <span class="count">100</span></h2>
+                        <div class="button-group">
+                            <a href="#" class="button export">
+                                <img src="./img/download-icon.svg" alt="Export Icon"> Export
+                            </a>
+                            <a href="#" class="button new-employee">
+                                <img src="./img/plus-icon.svg" alt="New Employee Icon"> New Employee
+                            </a>
+                        </div>
+                    </div>
+                       <!-- Filter Navbar -->
+                  <div class="filter-navbar">
+                        <a href="#" class="filter-link active">All Employees</a>
+                         <a href="#" class="filter-link">Teams</a>
+                         <a href="#" class="filter-link">Roles</a>
+                    </div>
+                    <div class="filter-searchbar">
+                        <form class="secondary-search-bar">
+                            <input type="text" placeholder="Search employees, teams...">
+                            <button type="button" class="filter-btn filter-icon">
+                                <img src="./img/filter.svg" alt="Filter">
+                                <span>filter</span>
+                            </button>
+                            <button type="button" class="filter-btn sort-icon">
+                                <img src="./img/filter-icon.svg" alt="Sort">
+                            </button>
+                            <button type="button" class="filter-btn view-icon">
+                                <img src="./img/view-icon.svg" alt="View">
+                            </button>
+                        </form>
+                    </div>
+                                                                        
+                                               
+                               
+                       
+                    
+                
+                </div>
+                <div class="employee-table">
+                    <div class="table-header">
+                        <div class="checkbox-column">
+                            <input type="checkbox">
+                        </div>
+                        <div class="table-column">Name</div>
+                        <div class="table-column">Employee ID</div>
+                        <div class="table-column">Role</div>
+                        <div class="table-column">Status</div>
+                        <div class="table-column">Teams</div>
+                    </div>
+                 <!--Dashboard -->
+                    <div class="table-row">
+                        <div class="checkbox-cell">
+                            <input type="checkbox">
+                        </div>
+                        <div class="name-cell">
+                            <div class="profile-info">
+                                <img class="profile-pic" src="profile-pic-url" alt="Profile Picture">
+                                <div class="name-details">
+                                    <span class="name">John Doe</span>
+                                    <span class="email">john.doe@example.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">EMP123</div>
+                        <div class="role-cell">
+                            <span class="role">Manager</span>
+                            <span class="role-description">Oversees Sales Department</span>
+                        </div>
+                        <div class="table-cell">Manager</div>
+                        <div class="table-cell">Active</div>
+                        <div class="table-cell">Sales</div>
+                    </div>
+                    <!-- Repeat .table-row for more employees -->
+                    <div class="table-row">
+                        <div class="checkbox-cell">
+                            <input type="checkbox">
+                        </div>
+                        <div class="name-cell">
+                            <div class="profile-info">
+                                <img class="profile-pic" src="profile-pic-url" alt="Profile Picture">
+                                <div class="name-details">
+                                    <span class="name">John Doe</span>
+                                    <span class="email">john.doe@example.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">EMP123</div>
+                        <div class="role-cell">
+                            <span class="role">Manager</span>
+                            <span class="role-description">Oversees Sales Department</span>
+                        </div>
+                        <div class="table-cell">Manager</div>
+                        <div class="table-cell">Active</div>
+                        <div class="table-cell">Sales</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="checkbox-cell">
+                            <input type="checkbox">
+                        </div>
+                        <div class="name-cell">
+                            <div class="profile-info">
+                                <img class="profile-pic" src="profile-pic-url" alt="Profile Picture">
+                                <div class="name-details">
+                                    <span class="name">John Doe</span>
+                                    <span class="email">john.doe@example.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">EMP123</div>
+                        <div class="role-cell">
+                            <span class="role">Manager</span>
+                            <span class="role-description">Oversees Sales Department</span>
+                        </div>
+                        <div class="table-cell">Manager</div>
+                        <div class="table-cell">Active</div>
+                        <div class="table-cell">Sales</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="checkbox-cell">
+                            <input type="checkbox">
+                        </div>
+                        <div class="name-cell">
+                            <div class="profile-info">
+                                <img class="profile-pic" src="profile-pic-url" alt="Profile Picture">
+                                <div class="name-details">
+                                    <span class="name">John Doe</span>
+                                    <span class="email">john.doe@example.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">EMP123</div>
+                        <div class="role-cell">
+                            <span class="role">Manager</span>
+                            <span class="role-description">Oversees Sales Department</span>
+                        </div>
+                        <div class="table-cell">Manager</div>
+                        <div class="table-cell">Active</div>
+                        <div class="table-cell">Sales</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="checkbox-cell">
+                            <input type="checkbox">
+                        </div>
+                        <div class="name-cell">
+                            <div class="profile-info">
+                                <img class="profile-pic" src="profile-pic-url" alt="Profile Picture">
+                                <div class="name-details">
+                                    <span class="name">John Doe</span>
+                                    <span class="email">john.doe@example.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">EMP123</div>
+                        <div class="role-cell">
+                            <span class="role">Manager</span>
+                            <span class="role-description">Oversees Sales Department</span>
+                        </div>
+                        <div class="table-cell">Manager</div>
+                        <div class="table-cell">Active</div>
+                        <div class="table-cell">Sales</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="checkbox-cell">
+                            <input type="checkbox">
+                        </div>
+                        <div class="name-cell">
+                            <div class="profile-info">
+                                <img class="profile-pic" src="profile-pic-url" alt="Profile Picture">
+                                <div class="name-details">
+                                    <span class="name">John Ken</span>
+                                    <span class="email">john.doe@example.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">EMP123</div>
+                        <div class="role-cell">
+                            <span class="role">Manager</span>
+                            <span class="role-description">Oversees Sales Department</span>
+                        </div>
+                        <div class="table-cell">Manager</div>
+                        <div class="table-cell">
+                            <button class="status-btn inactive">Inactive</button>
+                        </div>
+                        <div class="table-cell">Sales</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script src="./Js/index.js">
+
+    </script> 
+</body>
+</html>

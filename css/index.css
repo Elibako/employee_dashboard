@@ -1,0 +1,423 @@
+/* Container */
+.containerA {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid rgba(204, 204, 204, 0.5);
+    border-top: none; /* Corrected to 'none' instead of 'hidden' */
+    border-bottom: none;
+}
+
+/* Logo Section */
+.logo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* User Profile Section */
+.user-profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #ecf0f1;
+}
+
+.user-profile h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* Navigation Menu */
+.menu {
+    flex-grow: 1;
+    margin-top: 20px; /* Added space between user profile and menu */
+}
+
+.menu a {
+    display: flex; /* Align icon and text */
+    align-items: center; /* Center the icon and text vertically */
+    color: black;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.menu a img {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.menu a:hover {
+    background-color: #34495e;
+    color: white; /* Ensure text color changes on hover */
+}
+
+/* Sidebar Footer Links */
+.sidebar-footer a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 0;
+    border-top: 1px solid #34495e;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-footer a:hover {
+    background-color: #34495e;
+    color: white; /* Ensure text color changes on hover */
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    padding: 20px; /* Added padding for consistent spacing */
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(204, 204, 204, 0.5);
+    border-left: none;
+    border-right: none;
+}
+
+/* Search Bar */
+.search-bar {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* User Actions (Settings and Profile) */
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #2c3e50;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+/* Profile Picture */
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* border: 2px solid #ccc; */
+    object-fit: cover;
+}
+
+/* Content Area */
+.content {
+    padding: 20px;
+}
+/* Employee Header */
+.employee-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.employee-header h2 {
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.employee-header .count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #34495e;
+    margin-left: 10px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2c3e50;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.button img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.button:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+.export {
+    /* background-color: #eaf2f8; */
+    border-color: #bcd7e2;
+}
+
+.new-employee {
+  background-color: rgba(106, 16, 57, 1);
+  color: white;
+    border-color: #b2d6b7;
+}
+/* Filter Navbar */
+.filter-navbar {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.filter-link {
+    text-decoration: none;
+    font-size: 18px;
+    color: rgba(106, 16, 57, 1);
+    padding-bottom: 10px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.filter-link:hover,
+.filter-link.active {
+    color: rgba(106, 16, 57, 1);
+    border-bottom: 2px solid #2c3e50; /* Underline for active and hovered state */
+}
+/* Secondary Search Bar */
+.secondary-search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.secondary-search-bar input[type="text"] {
+    flex-grow: 1;
+    padding: 14px 20px; /* Increased padding for the search bar */
+    border: none;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+/* Common Button Styles Inside Search Bar */
+.filter-btn {
+    border: none;
+    padding: 10px 16px; /* Increased padding for filter buttons */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Space between icon and text */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+    margin-left: 10px; /* Increased space between buttons */
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+
+/* Specific Button Styles */
+.filter-btn.filter-icon {
+    background-color: #e0f7fa; /* Light cyan */
+    border: 1px solid #00acc1; /* Dark cyan border */
+}
+
+.filter-btn.sort-icon {
+    background-color: #e8f5e9; /* Light green */
+    border: 1px solid #66bb6a; /* Dark green border */
+}
+
+.filter-btn.view-icon {
+    background-color: #fce4ec; /* Light pink */
+    border: 1px solid #f48fb1; /* Dark pink border */
+}
+
+.filter-btn img {
+    width: 20px; 
+    height: 20px; 
+}
+
+.filter-btn:hover {
+    background-color: #d0d0d0; /* Light grey for hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+}
+
+/* Employee Table Section */
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Header Row */
+.table-header {
+    display: flex;
+    /* background-color: #f1f1f1; */
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    padding: 10px;
+    align-items: center; /* Vertically center items */
+}
+
+/* Data Rows */
+.table-row {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    align-items: center; /* Vertically center items */
+}
+
+/* Column Styles */
+.table-column,
+.table-cell {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+}
+
+/* Checkbox Column */
+.checkbox-column,
+.checkbox-cell {
+    width: 50px; /* Adjust width as needed */
+    text-align: center;
+}
+
+.checkbox-column input[type="checkbox"],
+.checkbox-cell input[type="checkbox"] {
+    margin: 0;
+    vertical-align: middle;
+}
+
+/* Name Column */
+.name-column,
+.name-cell {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.name-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.email {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Alternating Row Colors */
+/* .table-row:nth-child(even) {
+    background-color: #f9f9f9;
+} */
+
+/* Hover Effect */
+.table-row:hover {
+    background-color: #e0e0e0;
+}
+/* Role Column */
+.role-column,
+.role-cell {
+    display: flex;
+    flex-direction: column;
+}
+
+.role {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.role-description {
+    font-size: 14px;
+    color: #666;
+}
+/* Button Styling for Status */
+.status-btn {
+    padding: 5px 15px;
+    border-radius: 12px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Active Status Button */
+.status-btn.active {
+    background-color: #e0f7e9;
+    color: #28a745;
+}
+
+/* Example of other status buttons */
+.status-btn.inactive {
+    background-color: #f8d7da;
+    color: #dc3545;
+}
+
+.status-btn.pending {
+    background-color: #fff3cd;
+    color: #ffc107;
+}
