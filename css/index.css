@@ -239,7 +239,7 @@
 
 .secondary-search-bar input[type="text"] {
     flex-grow: 1;
-    padding: 14px 20px; /* Increased padding for the search bar */
+    padding:  20px; /* Increased padding for the search bar */
     border: none;
     font-size: 16px;
     outline: none;
@@ -265,18 +265,18 @@
 
 /* Specific Button Styles */
 .filter-btn.filter-icon {
-    background-color: #e0f7fa; /* Light cyan */
-    border: 1px solid #00acc1; /* Dark cyan border */
+    background-color: white; /* Light cyan */
+    border: 1px solid rgba(61, 57, 57, 0.1); 
 }
 
 .filter-btn.sort-icon {
-    background-color: #e8f5e9; /* Light green */
-    border: 1px solid #66bb6a; /* Dark green border */
+    background-color: white; 
+    border: 1px solid rgba(61, 57, 57, 0.1); 
 }
 
 .filter-btn.view-icon {
-    background-color: #fce4ec; /* Light pink */
-    border: 1px solid #f48fb1; /* Dark pink border */
+    background-color: white; 
+    border: 1px solid rgba(61, 57, 57, 0.1); 
 }
 
 .filter-btn img {
@@ -525,4 +525,48 @@
 .close:focus {
     color: black;
     text-decoration: none;
+}
+/* Button Styling for Status */
+.status-btn {
+    padding: 5px 15px;
+    border-radius: 12px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Active Status Button */
+.status-btn.active {
+    background-color: #e0f7e9;
+    color: #28a745;
+}
+
+/* Inactive Status Button */
+.status-btn.inactive {
+    background-color: #f8d7da;
+    color: #dc3545;
+}
+
+/* Pending Status Button */
+.status-btn.pending {
+    background-color: #fff3cd;
+    color: #ffc107;
+}
+/* Team Badges */
+.team-badge {
+    display: inline-block;
+    background-color: #dbe9f0; /* Light blue background */
+    color: #2c3e50; /* Dark text */
+    border-radius: 12px;
+    padding: 5px 10px;
+    margin: 2px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.team-badge.sales {
+    background-color: #dbe9f0; /* Light blue */
+    color: #1e90ff; /* Blue text */
 }
