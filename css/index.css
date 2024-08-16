@@ -13,7 +13,7 @@
     justify-content: space-between;
     padding: 20px;
     border: 2px solid rgba(204, 204, 204, 0.5);
-    border-top: none; /* Corrected to 'none' instead of 'hidden' */
+    border-top: none;
     border-bottom: none;
 }
 
@@ -135,7 +135,6 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    /* border: 2px solid #ccc; */
     object-fit: cover;
 }
 
@@ -143,6 +142,7 @@
 .content {
     padding: 20px;
 }
+
 /* Employee Header */
 .employee-header {
     display: flex;
@@ -194,15 +194,15 @@
 }
 
 .export {
-    /* background-color: #eaf2f8; */
     border-color: #bcd7e2;
 }
 
 .new-employee {
-  background-color: rgba(106, 16, 57, 1);
-  color: white;
+    background-color: rgba(106, 16, 57, 1);
+    color: white;
     border-color: #b2d6b7;
 }
+
 /* Filter Navbar */
 .filter-navbar {
     display: flex;
@@ -224,6 +224,7 @@
     color: rgba(106, 16, 57, 1);
     border-bottom: 2px solid #2c3e50; /* Underline for active and hovered state */
 }
+
 /* Secondary Search Bar */
 .secondary-search-bar {
     display: flex;
@@ -298,7 +299,6 @@
 /* Header Row */
 .table-header {
     display: flex;
-    /* background-color: #f1f1f1; */
     font-weight: bold;
     border-bottom: 2px solid #ddd;
     padding: 10px;
@@ -363,61 +363,166 @@
     font-weight: bold;
 }
 
+/* Email Styling */
 .email {
     font-size: 14px;
     color: #666;
 }
 
-/* Alternating Row Colors */
-/* .table-row:nth-child(even) {
-    background-color: #f9f9f9;
-} */
-
-/* Hover Effect */
-.table-row:hover {
-    background-color: #e0e0e0;
+/* Status Column */
+.status-column,
+.status-cell {
+    text-align: center;
+    flex: 0.5;
 }
+
+.status-cell.active {
+    color: green;
+}
+
+.status-cell.inactive {
+    color: red;
+}
+
+/* Department Column */
+.department-column,
+.department-cell {
+    flex: 1;
+}
+
 /* Role Column */
 .role-column,
 .role-cell {
+    flex: 1;
+}
+
+/* Teams Column */
+.teams-column,
+.teams-cell {
+    flex: 1;
+}
+
+/* Action Column */
+.actions-column,
+.actions-cell {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    flex: 0.5;
 }
 
-.role {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.role-description {
-    font-size: 14px;
-    color: #666;
-}
-/* Button Styling for Status */
-.status-btn {
-    padding: 5px 15px;
-    border-radius: 12px;
+.actions-cell button {
+    background-color: transparent;
     border: none;
-    font-size: 14px;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.actions-cell button:hover {
+    color: #333;
+}
+
+/* Hover Effect for Table Rows */
+.table-row:hover {
+    background-color: #f5f5f5;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .containerA {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .employee-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .filter-navbar {
+        flex-direction: column;
+    }
+
+    .secondary-search-bar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .filter-btn {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .table-header, .table-row {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .actions-cell {
+        justify-content: flex-start;
+    }
+}
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    display: inline-block;
-    text-align: center;
 }
 
-/* Active Status Button */
-.status-btn.active {
-    background-color: #e0f7e9;
-    color: #28a745;
-}
-
-/* Example of other status buttons */
-.status-btn.inactive {
-    background-color: #f8d7da;
-    color: #dc3545;
-}
-
-.status-btn.pending {
-    background-color: #fff3cd;
-    color: #ffc107;
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
 }

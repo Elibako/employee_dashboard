@@ -30,4 +30,66 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const newEmployeeButton = document.querySelector('.new-employee');
+    const modal = document.getElementById('newEmployeeModal');
+    const closeButton = document.querySelector('.close');
+    const form = document.getElementById('newEmployeeForm');
+    const table = document.querySelector('.employee-table');
+
+    newEmployeeButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        modal.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('employeeName').value;
+        const email = document.getElementById('employeeEmail').value;
+        const id = document.getElementById('employeeId').value;
+        const role = document.getElementById('employeeRole').value;
+        const status = document.getElementById('employeeStatus').value;
+        const team = document.getElementById('employeeTeam').value;
+
+        const row = document.createElement('div');
+        row.className = 'table-row';
+
+        row.innerHTML = `
+            <div class="checkbox-cell">
+                <input type="checkbox">
+            </div>
+            <div class="name-cell">
+                <div class="profile-info">
+                    <img class="profile-pic" src="profile-pic-url" alt="Profile Picture">
+                    <div class="name-details">
+                        <span class="name">${name}</span>
+                        <span class="email">${email}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">${id}</div>
+            <div class="role-cell">
+                <span class="role">${role}</span>
+                <span class="role-description">Role description here</span>
+            </div>
+            <div class="table-cell">${status}</div>
+            <div class="table-cell">${team}</div>
+        `;
+
+        table.appendChild(row);
+        modal.style.display = 'none';
+        form.reset();
+    });
+});
+
 
