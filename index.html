@@ -70,7 +70,7 @@
 
                 <div class="content">
                     <div class="employee-header">
-                        <h2>Employees <span class="count">100</span></h2>
+                        <h2>Employees <span class="count" style="font-size: medium;"><img src="./img/quest-icon.svg" alt="">100</span></h2>
                         <div class="button-group">
                             <a href="#" class="button export">
                                 <img src="./img/download-icon.svg" alt="Export Icon"> Export
@@ -90,8 +90,8 @@
                     
                     <div class="filter-searchbar">
                         <form class="secondary-search-bar">
-                            <input type="text" placeholder="Search employees, teams...">
-                            <button type="button" class="filter-btn filter-icon">
+                            <input type="text" id="searchInput" placeholder="Search employees, teams...">
+                            <button type="button" class="filter-btn filter-icon" id="filterBtn">
                                 <img src="./img/filter.svg" alt="Filter">
                                 <span>filter</span>
                             </button>
@@ -118,7 +118,7 @@
                     </div>
 
                     <!-- Dashboard -->
-                    <div class="table-row">
+                    <div class="table-row" data-name="Tanner Finsha">
                         <div class="checkbox-cell">
                             <input type="checkbox">
                         </div>
@@ -141,13 +141,13 @@
                         </div>
                         <div class="table-cell">
                             <span class="team-badge sales">Sales</span>
-                            <span class="team-badge">Marketing</span>
+                            <span class="team-badge marketing">Marketing</span>
                             <span class="team-badge">+1</span>
                         </div>
                     </div>
 
                     <!-- Repeat .table-row for more employees -->
-                    <div class="table-row">
+                    <div class="table-row" data-name="Jane Doe">
                         <div class="checkbox-cell">
                             <input type="checkbox">
                         </div>
@@ -169,12 +169,12 @@
                             <button class="status-btn active">Active</button>
                         </div>
                         <div class="table-cell">
-                            <span class="team-badge">Sales</span>
-                            <span class="team-badge">Marketing</span>
+                            <span class="team-badge sales">Sales</span>
+                            <span class="team-badge marketing">Marketing</span>
                         </div>
                     </div>
 
-                    <div class="table-row">
+                    <div class="table-row" data-name="Sam Smith">
                         <div class="checkbox-cell">
                             <input type="checkbox">
                         </div>
@@ -195,7 +195,9 @@
                         <div class="table-cell">
                             <button class="status-btn inactive">Inactive</button>
                         </div>
-                        <div class="table-cell">Development</div>
+                        <div class="table-cell">
+                            <span class="team-badge development">Development</span>
+                        </div>
                     </div>
 
                     <!-- Repeat similar rows as needed -->

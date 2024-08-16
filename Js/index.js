@@ -91,5 +91,28 @@ document.addEventListener('DOMContentLoaded', function () {
         form.reset();
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    const filterBtn = document.getElementById('filterBtn');
+    const tableRows = document.querySelectorAll('.employee-table .table-row');
+    
+    // Toggle Filter Dropdown
+    filterBtn.addEventListener('click', () => {
+        const filterNavbar = document.querySelector('.filter-navbar');
+        filterNavbar.classList.toggle('active');
+    });
+
+    // Filter Results
+    searchInput.addEventListener('input', (event) => {
+        const query = event.target.value.toLowerCase();
+
+        tableRows.forEach(row => {
+            const name = row.dataset.name.toLowerCase();
+            const matches = name.includes(query);
+            row.style.display = matches ? '' : 'none';
+        });
+    });
+});
+
 
 
