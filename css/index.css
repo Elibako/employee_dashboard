@@ -65,8 +65,9 @@
 }
 
 .menu a:hover {
-    background-color: #34495e;
+    background-color: rgba(154, 76, 30, 1);
     color: white; /* Ensure text color changes on hover */
+    border-radius: 10px;
 }
 
 /* Sidebar Footer Links */
@@ -75,7 +76,7 @@
     color: black;
     text-decoration: none;
     padding: 10px 0;
-    border-top: 1px solid #34495e;
+    border-top: 1px solid rgba(154, 76, 30, 1);
     transition: background-color 0.3s ease;
 }
 
