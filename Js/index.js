@@ -114,5 +114,66 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const pageNumbers = document.querySelectorAll('.page-number');
+    const contentSections = document.querySelectorAll('.content');
+    const prevPage = document.querySelector('.prev-page');
+    const nextPage = document.querySelector('.next-page');
+    let currentPage = 1;
+
+    function updateContent() {
+        // Hide all content sections
+        contentSections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Show the current page's content
+        document.getElementById(`page${currentPage}`).style.display = 'block';
+    }
+
+    function updatePagination() {
+        // Highlight the current page number
+        pageNumbers.forEach(page => {
+            page.classList.remove('active');
+        });
+        pageNumbers[currentPage - 1].classList.add('active'); // Use the currentPage index
+
+        // Enable/Disable Previous and Next buttons
+        prevPage.classList.toggle('disabled', currentPage === 1);
+        nextPage.classList.toggle('disabled', currentPage === pageNumbers.length);
+
+        updateContent();
+    }
+
+    // Event listeners for page numbers
+    pageNumbers.forEach(page => {
+        page.addEventListener('click', function (e) {
+            e.preventDefault();
+            currentPage = parseInt(this.textContent);
+            updatePagination();
+        });
+    });
+
+    // Event listener for Previous button
+    prevPage.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (currentPage > 1) {
+            currentPage--;
+            updatePagination();
+        }
+    });
+
+    // Event listener for Next button
+    nextPage.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (currentPage < pageNumbers.length) {
+            currentPage++;
+            updatePagination();
+        }
+    });
+
+    // Initialize pagination on page load
+    updatePagination();
+});
 
 
